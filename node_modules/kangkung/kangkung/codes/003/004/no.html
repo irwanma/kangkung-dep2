@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML with JavaScript</title>
+</head>
+<body>
+    <h1>Dynamic HTML with JavaScript</h1>
+
+    <div id="content">
+        <!-- Tempat untuk menambahkan elemen HTML secara dinamis -->
+    </div>
+
+    <script>
+        // Fungsi untuk menambahkan elemen HTML secara dinamis
+        function addDynamicElement() {
+            // Membuat elemen <p>
+            var paragraph = document.createElement("p");
+            
+            // Menambahkan teks ke dalam elemen <p>
+            paragraph.textContent = "Ini adalah teks yang ditambahkan secara dinamis menggunakan JavaScript.";
+
+            // Menambahkan elemen <p> ke dalam elemen dengan id="content"
+            document.getElementById("content").appendChild(paragraph);
+        }
+
+        // Memanggil fungsi addDynamicElement() saat halaman dimuat sepenuhnya
+        window.onload = addDynamicElement;
+    </script>
+</body>
+</html>
